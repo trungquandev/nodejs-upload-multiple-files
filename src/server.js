@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
 const initRoutes = require("./routes/web");
+
+// Xử lý dữ liệu từ form method POST
+app.use(bodyParser.json());
 
 // Khởi tạo các routes cho ứng dụng
 initRoutes(app);
