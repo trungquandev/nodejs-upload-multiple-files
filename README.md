@@ -1,4 +1,4 @@
-# Node.js multiple upload files
+# Node.js upload multiple files
 
 ## Requirements
 
@@ -15,7 +15,7 @@ $ node src/server.js
 
 Guide for this repository is here:
 
-https://trungquandev.com/multiple-upload-files-trong-nodejs/
+https://trungquandev.com/upload-multiple-files-trong-nodejs/
 
 Author: Trung Quân
 
