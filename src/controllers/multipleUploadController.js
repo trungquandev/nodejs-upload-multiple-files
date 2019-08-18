@@ -24,6 +24,12 @@ let multipleUpload = async (req, res) => {
   } catch (error) {
     // Nếu có lỗi thì debug lỗi xem là gì ở đây
     debug(error);
+
+    // Bắt luôn lỗi vượt quá số lượng file cho phép tải lên trong 1 lần
+    if (error.code === "LIMIT_UNEXPECTED_FILE") {
+      return res.send(`Exceeds the number of files allowed to upload.`);
+    }
+
     return res.send(`Error when trying upload many files: ${error}}`);
   }
 };
